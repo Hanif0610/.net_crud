@@ -8,5 +8,6 @@ namespace crud.Service
     public interface IHelloService
     {
         String getHello();
+        String getHelloParam(int num);
     }
 }
