@@ -12,9 +12,9 @@ namespace crud.Controllers
     [ApiController]
     public class HelloController : ControllerBase
     {
-        private readonly HelloService _helloService;
+        private readonly IHelloService _helloService;
 
-        public HelloController(HelloService helloService)
+        public HelloController(IHelloService helloService)
         {
             _helloService = helloService;
         }
@@ -28,7 +28,7 @@ namespace crud.Controllers
         [HttpGet("world/{num}")]
         public string World(int num)
         {
-            return "Hello, Wrold!" + num;
+            return _helloService.getHelloParam(num);
         }
     }
 }

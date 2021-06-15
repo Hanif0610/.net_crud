@@ -27,7 +27,7 @@ namespace crud
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<HelloService, HelloServiceImpl>();
+            services.AddScoped<IHelloService, HelloService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

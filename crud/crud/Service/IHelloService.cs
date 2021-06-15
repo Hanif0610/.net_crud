@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace crud.Service
 {
-    public class HelloServiceImpl : HelloService
+    public interface IHelloService
     {
-        public string getHello() => "Hello, World!";
+        String getHello();
     }
 }
