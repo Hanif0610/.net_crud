@@ -88,5 +88,7 @@ C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\ru\M
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\obj\Debug\netcoreapp3.1\crud.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\obj\Debug\netcoreapp3.1\crud.csproj.CopyComplete
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Autofac.dll
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\obj\Debug\netcoreapp3.1\crud.MvcApplicationPartsAssemblyInfo.cache
