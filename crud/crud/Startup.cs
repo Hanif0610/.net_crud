@@ -27,6 +27,7 @@ namespace crud
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<IUserService, UserService>();
             services.AddScoped<IHelloService, HelloService>();
         }
 
