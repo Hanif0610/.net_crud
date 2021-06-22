@@ -16,6 +16,6 @@ namespace crud.Controllers
         }
 
         [HttpPost("add")]
-        public int AddUser([FromBody]AddUserDto addUserDto) => _userService.addUser(addUserDto);
+        public int AddUser([FromBody]AddUserDto addUserDto) => _userService.AddUser(addUserDto);
     }
 }
