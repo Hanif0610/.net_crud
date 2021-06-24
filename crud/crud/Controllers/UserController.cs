@@ -1,6 +1,8 @@
-﻿using crud.Model;
+﻿using crud.Entity;
+using crud.Model;
 using crud.Service;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace crud.Controllers
 {
@@ -8,14 +10,17 @@ namespace crud.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IUserService _userService;
+        private static IUserService _userService;
 
         public UserController(IUserService userService)
         {
-            _userService = userService;
+            _userService ??= userService;
         }
 
         [HttpPost("add")]
         public int AddUser([FromBody]AddUserDto addUserDto) => _userService.AddUser(addUserDto);
+
+        [HttpGet]
+        public User usertList() => _userService.UserList();
     }
 }
