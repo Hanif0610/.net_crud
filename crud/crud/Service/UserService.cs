@@ -21,6 +21,10 @@ namespace crud.Service
             return cnt++;
         }
 
-        public User UserList() => users[0];
+        public User UserList()
+        {
+            //            return new User(users[0].id, users[0].name, users[0].age, users[0].height);
+            return new User().Builder().Id(users[0].id).Name(users[0].name).Age(users[0].age).Height(users[0].height).Build();
+        }
     }
 }
