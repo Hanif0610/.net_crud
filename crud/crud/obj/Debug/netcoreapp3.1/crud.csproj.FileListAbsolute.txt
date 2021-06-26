@@ -91,4 +91,6 @@ C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\zh-H
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\obj\Debug\netcoreapp3.1\crud.csproj.CopyComplete
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Autofac.dll
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\obj\Debug\netcoreapp3.1\crud.MvcApplicationPartsAssemblyInfo.cache
