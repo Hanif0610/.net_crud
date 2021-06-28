@@ -1,5 +1,4 @@
-﻿using crud.Entity;
-using crud.Model;
+﻿using crud.Model;
 using crud.Service;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -22,5 +21,8 @@ namespace crud.Controllers
 
         [HttpGet]
         public List<UserResponseDto> UsertList() => _userService.UserList();
+
+        [HttpGet("{id}")]
+        public UserResponseDto UserInfo(int id) => _userService.UserInfo(id);
     }
 }

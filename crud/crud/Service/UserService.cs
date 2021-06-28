@@ -8,6 +8,7 @@ namespace crud.Service
     {
         int AddUser(AddUserDto addUserDto);
         List<UserResponseDto> UserList();
+        UserResponseDto UserInfo(int id);
     }
 
     public class UserService : IUserService
@@ -30,5 +31,11 @@ namespace crud.Service
             }
             return userList;
         }
+        public UserResponseDto UserInfo(int id)
+        {
+            User user = users.Find(x => x.id == id);
+            return user == null ? null : new UserResponseDto().Builder().Id(user.id).Name(user.name).Age(user.age).Height(user.height).Build();
+        }
+
     }
 }
