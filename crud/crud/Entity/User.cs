@@ -21,36 +21,5 @@ namespace crud.Entity
             this.age = age;
             this.height = height;
         }
-
-        public User Builder()
-        {
-            return new User();
-        }
-
-        public User Id(int id)
-        {
-            this.id = id;
-            return this;
-        }
-        public User Name(string name)
-        {
-            this.name = name;
-            return this;
-        }
-        public User Age(int age)
-        {
-            this.age = age;
-            return this;
-        }
-        public User Height(int height)
-        {
-            this.height = height;
-            return this;
-        }
-
-        public User Build()
-        {
-            return this;
-        }
     }
 }
