@@ -7,7 +7,7 @@ namespace crud.Service
     public interface IUserService
     {
         int AddUser(AddUserDto addUserDto);
-        User UserList();
+        List<User> UserList();
     }
 
     public class UserService : IUserService
@@ -21,10 +21,14 @@ namespace crud.Service
             return cnt++;
         }
 
-        public User UserList()
+        public List<User> UserList()
         {
-            //            return new User(users[0].id, users[0].name, users[0].age, users[0].height);
-            return new User().Builder().Id(users[0].id).Name(users[0].name).Age(users[0].age).Height(users[0].height).Build();
+            List<User> userList = new List<User>();
+            foreach(User user in users)
+            {
+                userList.Add(new User().Builder().Id(user.id).Name(user.name).Age(user.age).Height(user.height).Build());
+            }
+            return userList;
         }
     }
 }

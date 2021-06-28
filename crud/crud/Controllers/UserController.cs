@@ -21,6 +21,6 @@ namespace crud.Controllers
         public int AddUser([FromBody]AddUserDto addUserDto) => _userService.AddUser(addUserDto);
 
         [HttpGet]
-        public User UsertList() => _userService.UserList();
+        public List<User> UsertList() => _userService.UserList();
     }
 }
