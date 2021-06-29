@@ -22,6 +22,8 @@ namespace crud
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddSingleton<UserController, UserController>();
+
             services.AddSingleton<IUserService, UserService>();
             services.AddSingleton<IHelloService, HelloService>();
         }
