@@ -27,5 +27,8 @@ namespace crud.Controllers
 
         [HttpPut("{id}")]
         public void UpdateUser(int id, [FromBody] AddUserDto addUserDto) => _userService.UpdateUser(id, addUserDto);
+
+        [HttpDelete("{id}")]
+        public void DeleteUser(int id) => _userService.DeleteUser(id);
     }
 }

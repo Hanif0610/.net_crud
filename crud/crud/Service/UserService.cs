@@ -10,6 +10,7 @@ namespace crud.Service
         List<UserResponseDto> UserList();
         UserResponseDto UserInfo(int id);
         void UpdateUser(int id, AddUserDto addUserDto);
+        void DeleteUser(int id);
     }
 
     public class UserService : IUserService
@@ -44,6 +45,11 @@ namespace crud.Service
             users[id - 1].name = addUserDto.name;
             users[id - 1].age = addUserDto.age;
             users[id - 1].height = addUserDto.height;
+        }
+
+        public void DeleteUser(int id)
+        {
+            users.RemoveAt(id - 1);
         }
     }
 }
