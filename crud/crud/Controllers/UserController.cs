@@ -16,13 +16,16 @@ namespace crud.Controllers
             _userService ??= userService;
         }
 
-        [HttpPost("add")]
-        public int AddUser([FromBody]AddUserDto addUserDto) => _userService.AddUser(addUserDto);
+        [HttpPost]
+        public int AddUser([FromBody] AddUserDto addUserDto) => _userService.AddUser(addUserDto);
 
         [HttpGet]
         public List<UserResponseDto> UsertList() => _userService.UserList();
 
         [HttpGet("{id}")]
         public UserResponseDto UserInfo(int id) => _userService.UserInfo(id);
+
+        [HttpPut("{id}")]
+        public void UpdateUser(int id, [FromBody] AddUserDto addUserDto) => _userService.UpdateUser(id, addUserDto);
     }
 }

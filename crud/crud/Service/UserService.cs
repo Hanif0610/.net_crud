@@ -9,6 +9,7 @@ namespace crud.Service
         int AddUser(AddUserDto addUserDto);
         List<UserResponseDto> UserList();
         UserResponseDto UserInfo(int id);
+        void UpdateUser(int id, AddUserDto addUserDto);
     }
 
     public class UserService : IUserService
@@ -31,11 +32,18 @@ namespace crud.Service
             }
             return userList;
         }
+
         public UserResponseDto UserInfo(int id)
         {
             User user = users.Find(x => x.id == id);
             return user == null ? null : new UserResponseDto().Builder().Id(user.id).Name(user.name).Age(user.age).Height(user.height).Build();
         }
 
+        public void UpdateUser(int id, AddUserDto addUserDto)
+        {
+            users[id - 1].name = addUserDto.name;
+            users[id - 1].age = addUserDto.age;
+            users[id - 1].height = addUserDto.height;
+        }
     }
 }
