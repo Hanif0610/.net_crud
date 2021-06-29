@@ -9,11 +9,11 @@ namespace crud.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private static IUserService _userService;
+        private IUserService _userService;
 
         public UserController(IUserService userService)
         {
-            _userService ??= userService;
+            _userService = userService;
         }
 
         [HttpPost]
