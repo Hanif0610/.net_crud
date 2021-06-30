@@ -1,5 +1,6 @@
 ﻿using crud.Entity;
 using crud.Model;
+using Microsoft.AspNetCore.Http;
 using System.Collections.Generic;
 
 namespace crud.Service
@@ -37,11 +38,19 @@ namespace crud.Service
         public UserResponseDto UserInfo(int id)
         {
             User user = users.Find(x => x.id == id);
-            return user == null ? null : new UserResponseDto().Builder().Id(user.id).Name(user.name).Age(user.age).Height(user.height).Build();
+            if (user == null)
+            {
+                throw new KeyNotFoundException("User Not Found.");
+            }
+            return new UserResponseDto().Builder().Id(user.id).Name(user.name).Age(user.age).Height(user.height).Build();
         }
 
         public void UpdateUser(int id, AddUserDto addUserDto)
         {
+            if(users.Find(x => x.id == id) == null)
+            {
+                throw new KeyNotFoundException("User Not Found.");
+            }
             users[id - 1].name = addUserDto.name;
             users[id - 1].age = addUserDto.age;
             users[id - 1].height = addUserDto.height;
@@ -49,6 +58,10 @@ namespace crud.Service
 
         public void DeleteUser(int id)
         {
+            if (users.Find(x => x.id == id) == null)
+            {
+                throw new KeyNotFoundException("User Not Found.");
+            }
             users.RemoveAt(id - 1);
         }
     }
