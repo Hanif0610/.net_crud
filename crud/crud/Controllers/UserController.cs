@@ -19,6 +19,9 @@ namespace crud.Controllers
         [HttpPost]
         public int AddUser([FromBody] AddUserDto addUserDto) => _userService.AddUser(addUserDto);
 
+        [HttpPost("login")]
+        public TokenResponseDto Login([FromBody] LoginRequestDto loginRequestDto) => _userService.Login(loginRequestDto);
+
         [HttpGet]
         public List<UserResponseDto> UsertList() => _userService.UserList();
 
