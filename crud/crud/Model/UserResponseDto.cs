@@ -10,7 +10,7 @@ namespace crud.Model
         public int id { get; set; }
         public string name { get; set; }
         public int age { get; set; }
-        public int height { get; set; }
+        public string email { get; set; }
 
 
         public UserResponseDto Builder()
@@ -33,9 +33,10 @@ namespace crud.Model
             this.age = age;
             return this;
         }
-        public UserResponseDto Height(int height)
+
+        public UserResponseDto Email(string email)
         {
-            this.height = height;
+            this.email = email;
             return this;
         }
 
