@@ -14,7 +14,8 @@ namespace crud.Util
 {
     public interface IJwtService
     {
-        public string GenerateJwtToken(int accountId);
+        public string GenerateAccessToken(int accountId);
+        public string GenerateRefreshToken(int accountId);
         public bool ValidateJwtToken(string token);
     }
 
@@ -27,13 +28,33 @@ namespace crud.Util
             _jwtConfig = jwtConfig.Value;
         }
 
-        public string GenerateJwtToken(int accountId)
+        public string GenerateAccessToken(int accountId)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_jwtConfig.secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] { new Claim("id", accountId.ToString()) }),
+                Subject = new ClaimsIdentity(new[] { 
+                    new Claim("id", accountId.ToString()),
+                    new Claim("type", "accessToken")
+                }),
+                Expires = DateTime.UtcNow.AddDays(1),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
+        }
+
+        public string GenerateRefreshToken(int accountId)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_jwtConfig.secret);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[] {
+                    new Claim("id", accountId.ToString()),
+                    new Claim("type", "refreshToken")
+                }),
                 Expires = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };

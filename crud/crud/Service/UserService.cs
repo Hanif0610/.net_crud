@@ -99,6 +99,9 @@ namespace crud.Service
         }
 
         private TokenResponseDto TokenResponse(int accountId) =>
-            new TokenResponseDto().Builder().AccessToken(_jwtService.GenerateJwtToken(accountId)).TokenType("Bearer").Build();
+            new TokenResponseDto().Builder()
+            .AccessToken(_jwtService.GenerateAccessToken(accountId))
+            .RefreshToken(_jwtService.GenerateRefreshToken(accountId))
+            .TokenType("Bearer").Build();
     }
 }
