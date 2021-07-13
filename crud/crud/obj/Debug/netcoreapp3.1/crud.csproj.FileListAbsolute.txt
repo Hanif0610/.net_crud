@@ -93,8 +93,13 @@ C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Auto
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll
-C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\obj\Debug\netcoreapp3.1\crud.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\obj\Debug\netcoreapp3.1\crud.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\SW\Github\.net_crud\crud\crud\obj\Debug\netcoreapp3.1\crud.MvcApplicationPartsAssemblyInfo.cache
