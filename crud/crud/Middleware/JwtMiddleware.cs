@@ -25,9 +25,10 @@ namespace crud.Middleware
 
         public async Task Invoke(HttpContext context, IUserService userService)
         {
+            var type = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").First();
             var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 
-            if (token != null)
+            if (type == "Bearer" && token != null)
                 attachUserToContext(context, userService, token);
 
             await _next(context);
