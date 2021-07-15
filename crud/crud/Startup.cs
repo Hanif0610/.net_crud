@@ -53,6 +53,7 @@ namespace crud
 
             services.AddSingleton<IJwtService, JwtService>();
             services.AddSingleton<IUserService, UserService>();
+            services.AddSingleton<IPostService, PostService>();
             services.AddSingleton<IHelloService, HelloService>();
         }
 
@@ -78,6 +79,7 @@ namespace crud
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseMiddleware<ErrorHandlerMiddleware>();
             app.UseMiddleware<JwtMiddleware>();
